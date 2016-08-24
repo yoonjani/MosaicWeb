@@ -34,8 +34,6 @@
 			<div class="col-xs-6 col-sm-3 col-md-2 col-lg-5 bbox"><img width="100%" alt="Three" src="http://www.placehold.it/100x100?text=Three"></div>
 			<div class="col-xs-6 col-sm-3 col-md-2 col-lg-1 bbox"><img width="100%" alt="Four"  src="http://www.placehold.it/100x100?text=Four"></div>
 		</div>	
-		
-	
 	</div>
 </body>
 </html>

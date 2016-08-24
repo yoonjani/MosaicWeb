@@ -29,6 +29,7 @@
 			ename : "hong",
 			loc : "seoul"
 		};
+		
 		var html = ctemplate(emp);
 		
 // 		$('#emps').html(html);
