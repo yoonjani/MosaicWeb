@@ -23,7 +23,7 @@
 		</div>
 		
 		<div class="form-group">
-			<label for="replyert">replyer : </label>
+			<label for="replyer">replyer : </label>
 			<input class="form-control" type="text" id="replyer" value="USER01"/>
 		</div>
 		
