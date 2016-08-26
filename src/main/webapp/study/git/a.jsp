@@ -11,8 +11,13 @@
 <script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
 </head>
 <body>
-<h1>
-A.jsp
-</h1>
+<h1>A.jsp</h1>
+
+<ul>
+	<li>spring</li>
+	<li>mybatis</li>
+	<li>Bootstrap</li>
+	<li>jQuery</li>
+</ul>
 </body>
 </html>
