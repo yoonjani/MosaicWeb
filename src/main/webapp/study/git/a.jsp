@@ -13,11 +13,12 @@
 <body>
 <h1>A.jsp</h1>
 
-<ol>
-	<li>java</li>
-	<li>javascript</li>
-	<li>css</li>
-	<li>html</li>
-</ol>
+<ul>
+	<li>spring</li>
+	<li>mybatis</li>
+	<li>Bootstrap</li>
+	<li>jQuery</li>
+</ul>
+
 </body>
 </html>
