@@ -1198,7 +1198,7 @@
             </java.beans.PropertyChangeSupport>
           </listeners>
           <constraint>
-            <height>568</height>
+            <height>567</height>
             <width>5</width>
             <x>75</x>
             <y>20</y>
@@ -1298,7 +1298,7 @@
                         </java.beans.PropertyChangeSupport>
                       </listeners>
                       <constraint>
-                        <height>568</height>
+                        <height>567</height>
                         <width>5</width>
                         <x>342</x>
                         <y>20</y>
@@ -1401,7 +1401,7 @@
                                     </java.beans.PropertyChangeSupport>
                                   </listeners>
                                   <constraint>
-                                    <height>568</height>
+                                    <height>567</height>
                                     <width>5</width>
                                     <x>212</x>
                                     <y>20</y>
