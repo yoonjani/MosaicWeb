@@ -64,6 +64,7 @@ create table tbl_message (
 	primary key(mid)
 );
 
+
 alter table tbl_message add constraint fk_usertarger
 foreign key (targetid) references tbl_user (uid);
 
@@ -116,3 +117,4 @@ CREATE TABLE tbl_attach
 
 ALTER TABLE tbl_attach
   ADD CONSTRAINT fk_borad_attach FOREIGN KEY(bno) REFERENCES tbl_board(bno);
+  
