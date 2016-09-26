@@ -29,7 +29,7 @@ public class MessageDAOImpl implements MessageDAO {
 	@Override
 	public void updateState(Integer mid) throws Exception {
 
-		session.update(namespace+".upldateState", mid);
+		session.update(namespace+".updateState", mid);
 
 	}
 

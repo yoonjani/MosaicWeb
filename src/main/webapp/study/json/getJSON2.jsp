@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>getJSON.jsp</title>
+<title>getJSON2.jsp</title>
 <link href="/resources/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css" />
+	
 <script src="/resources/plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
 
@@ -24,102 +25,58 @@
 <hr>
 <h1>AJAX (Asyncronous Javascript And Xml) 비동기 자바스크립트 데이터 통신 기술</h1>
 
-<button class="btn btn-primary">getJSON dept</button>
-<button class="btn btn-primary">getJSON depts</button>
+<button class="btn btn-primary">getJSON2 messages</button>
 
-<button class="btn btn-primary">getJSON dept + handlebars</button>
-<button class="btn btn-primary">getJSON depts + handlebars</button>
-<button class="btn btn-info">Clear</button>
-<ul id="result" class="list-group"></ul>
+<div id="list"></div>
+
+<script id="result" type="text/x-handlebars-template">
+	<ul>
+		{{#each .}}
+		<li class="list-group-item">
+			[{{mid}}] {{targetid}} <i class="fa fa-backward fa-spin"></i> {{sender}} {{message}}
+		</li>
+		{{/each}}
+	</ul>
+</script>
 
 <script type="text/javascript">
 
 	$('button').eq(0).on('click', function() {
 		
 
-	$.getJSON("/messages/listmessage", function(data) {
+	$.getJSON("/messages/listmessage?mid=1", function(data) {
 		console.log(data);
 		console.log("mid = " + data.mid);
 		console.log("targetid = " + data.targetid);
 		console.log("sender = " + data.sender);
 		console.log("message = " + data.message);
 		
-		var li = '<li class="list-group-item">' + data.mid + "," + data.targetid + "," + data.sender + "," + data.message + "</li>";
+		var msg = {
+				mid : data.mid,
+				targetid : data.targetid,
+				sender : data.sender,
+				message : data.message
+			};
 		
-		$('#result').html(li);
+
+		console.dir(msg);
+
+		var template = $('#result');
+		
+		var ctemplate = Handlebars.compile(template.html());
+		
+		var html = ctemplate(msg);
+		
+		$('#list').html(html);
+// 		$('#emps').append(html);		
+		
+// 		var li = '<li class="list-group-item">' + data.mid + "," + data.targetid + "," + data.sender + "," + data.message + "</li>";
+		
+		
+// 		$('#result').html(li);
 		});
 	});
 	
-	$('button').eq(1).on('click', function() {
-		
-
-	$.getJSON("/study/json/depts.json", function(data) {
-		console.dir(data);
-		for (var i=0; i<data.length; i++) {
-		console.log("deptno = " + data[i].deptno);
-		console.log("dname = " + data[i].dname);
-		console.log("loc = " + data[i].loc);
-		}
-		
-		var lis="";
-		for (var i=0; i<data.length; i++) {
- 		   lis += '<li class="list-group-item list-group-item-success">' + data[i].deptno + "," + data[i].dname + "," + data[i].loc + "</li>";
-		}	
-		
- 		$('#result').html(lis);
-
-		});
-	});
-
-	$('#clear').on('click', function() {
-		$('#result').html("");
-	});
-</script>
-
-<script id="temp1" type="text/xxx-mytemplate">
-
-	<li class="list-group-item list-group-item-info">{{deptno}}, {{dname}}, {{loc}}</li>
-
-</script>
-
-<script id="temp2" type="text/xxx-mytemplate">
-	{{#each.}}
-	<li class="list-group-item list-group-item-warning">{{deptno}}, {{dname}}, {{loc}}</li>
-	{{/each}}
-</script>
-
-<script type="text/javascript">
-
-	$('button').eq(2).on('click', function() {
-		
-		 $.getJSON("/study/json/dept.json", function(dept){
-			 console.dir(dept);
-			 
-			 var temp1 = $('#temp1').html();
-			 var template = Handlebars.compile(temp1);
-			 
-			 var html = template(dept);
-			 console.log(html);
-			 
-			 $('#result').html(html);
-			 
-		 });
-	});
-	
-	$('button').eq(3).on('click', function() {
-		
-		 $.getJSON("/study/json/depts.json", function(depts){
-			 console.dir(depts);
-			 
-			 var temp2 = $('#temp2').html();
-			 var template = Handlebars.compile(temp2);
-			 
-			 var html = template(depts);
-			 console.log(html);
-			 
-			 $('#result').html(html);
-		 });
-	});
 
 </script>
 </body>

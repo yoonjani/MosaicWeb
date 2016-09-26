@@ -81,9 +81,8 @@
 							"&pageNo=1" +
 							"&MobileOS=ETC" +
 							"&MobileApp=TestApp" +
-							"&_type=json",
-// 							"&_type=json" + 
-// 							"&areaCode=39", 
+							"&_type=json" +
+ 							"&areaCode=39", 
 							function(areaCode) {
 			// json 객체 내부 접근하기
 			console.dir(areaCode);

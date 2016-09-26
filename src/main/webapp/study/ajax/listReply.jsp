@@ -98,7 +98,7 @@
 			    str += "bno=" + $(this).attr("data-bno");
 			    str += "replytext=" + $(this).attr("data-replytext");
 			    
-	   	 //alert(str);	
+//		 alert(str);	
 // 	   	 if(confirm(str))
 // 	   		 alert("확인 클릭");
 // 	   	 else

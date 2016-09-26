@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.zerock.domain.MessageVO;
 import org.zerock.service.MessageService;
@@ -37,11 +38,11 @@ public class MessageController {
 	}
 
 	@RequestMapping(value = "/listmessage", method = RequestMethod.GET)
-	public ResponseEntity<List<MessageVO>> list(@PathVariable("mid") Integer mid) {
+	public ResponseEntity<MessageVO> list(@RequestParam("mid") Integer mid) {
 		
-		ResponseEntity<List<MessageVO>> entity = null;
+		ResponseEntity<MessageVO> entity = null;
 		try {
-			entity = new ResponseEntity<>(service.listMessage(mid), HttpStatus.OK);
+			entity = new ResponseEntity<>(service.readMessage("user01", mid), HttpStatus.OK);
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -26,7 +26,7 @@
 	rel="stylesheet" type="text/css" />
 <!-- Theme style -->
 <link href="/resources/dist/css/AdminLTE.css" rel="stylesheet"
-	type="text/css" />	
+	type="text/css" />
 <!-- AdminLTE Skins. Choose a skin from the css/skins 
      folder instead of downloading all of them to reduce the load. -->
 <link href="/resources/dist/css/skins/_all-skins.min.css"
@@ -457,20 +457,20 @@
 
 		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper" style="border: 2px solid red;">
-		
+
 			<section class="content" style="border: 2px solid blue;">
 				<!-- ################## -->
 				<!-- START Main Content -->
 				<!-- ################## -->
 				<div class="container-fluid">
-				<sitemesh:write property="body" />
+					<sitemesh:write property="body" />
 				</div>
 				<!-- ################## -->
 				<!-- END   Main Content -->
 				<!-- ################## -->
 			</section>
 		</div>
-		
+
 		<footer class="main-footer">
 			<div class="pull-right hidden-xs">
 				<b>Version</b> 2.0
@@ -514,8 +514,8 @@
 						<li><a href='javascript::;'> <i
 								class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 								<div class="menu-info">
-									<h4 class="control-sidebar-subheading">Nora Joined
-										Mailing List</h4>
+									<h4 class="control-sidebar-subheading">Nora Joined Mailing
+										List</h4>
 									<p>nora@example.com</p>
 								</div>
 						</a></li>
@@ -553,8 +553,7 @@
 						</a></li>
 						<li><a href='javascript::;'>
 								<h4 class="control-sidebar-subheading">
-									Laravel Integration <span
-										class="label label-waring pull-right">50%</span>
+									Laravel Integration <span class="label label-waring pull-right">50%</span>
 								</h4>
 								<div class="progress progress-xxs">
 									<div class="progress-bar progress-bar-warning"
@@ -563,8 +562,7 @@
 						</a></li>
 						<li><a href='javascript::;'>
 								<h4 class="control-sidebar-subheading">
-									Back End Framework <span
-										class="label label-primary pull-right">68%</span>
+									Back End Framework <span class="label label-primary pull-right">68%</span>
 								</h4>
 								<div class="progress progress-xxs">
 									<div class="progress-bar progress-bar-primary"
@@ -577,8 +575,8 @@
 				</div>
 				<!-- /.tab-pane -->
 				<!-- Stats tab content -->
-				<div class="tab-pane" id="control-sidebar-stats-tab">Stats
-					Tab Content</div>
+				<div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab
+					Content</div>
 				<!-- /.tab-pane -->
 				<!-- Settings tab content -->
 				<div class="tab-pane" id="control-sidebar-settings-tab">
@@ -640,7 +638,7 @@
 		<!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
 		<div class='control-sidebar-bg'></div>
-		
+
 	</div>
 	<!-- ./wrapper -->
 
